@@ -3,8 +3,8 @@ const mongoose = require('mongoose')
 
 // Importa las rutas
 import doctorRoutes from '../routes/doctorRoutes';
-// import patientRoutes from '../routes/patientRoutes';
-// import appointmentRoutes from '../routes/appointmentRoutes';
+import patientRoutes from '../routes/patientRoutes';
+import appointmentRoutes from '../routes/appointmentRoutes';
 
 const app = express();
 const PORT = 3000;
@@ -31,6 +31,6 @@ app.use(express.json());
 
 // Rutas
 app.use('/api', doctorRoutes);
-// app.use('/api', patientRoutes);
-// app.use('/api', appointmentRoutes);
+app.use('/api', patientRoutes);
+app.use('/api', appointmentRoutes);
 
